@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide all scrollbars */
+body {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+
+/* Hide the vertical scrollbar */
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Hide the horizontal scrollbar (if needed) */
+body::-webkit-scrollbar-horizontal {
+    display: none;
+}
+
+/* Hide the vertical scrollbar (if needed) */
+body::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+.no-arrows::-webkit-inner-spin-button,
+.no-arrows::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.no-arrows {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+.sliding-bar-right {
+    transition: all 1s ease;
+    /* You can adjust the duration and easing function as needed */
+}
+
+.sliding-bar-left {
+    right: -950px;
+    transition: all 1s ease-in-out;
+    /* You can adjust the duration and easing function as needed */
+}
