@@ -12,14 +12,14 @@ require("./model/user")
 require("./model/order")
 
 //connecting frontend and backend
-app.use(express.static(path.join(__dirname, "/client/dist")));
+app.use(express.static(path.join(__dirname, "../client/dist")));
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname + "/client/dist/index.html"));
+    res.sendFile(path.join(__dirname + "../client/dist/index.html"));
 });
 
 app.use(express.json())//parsing the req before it get to routes
 app.use(cors({
-    "origin": "*"
+    origin: "*"
 }))//connecting the server side and client side
 app.use(express.urlencoded({ extended: true }));
 
